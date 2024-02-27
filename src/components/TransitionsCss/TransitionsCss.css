@@ -1,17 +1,20 @@
 :root{
-    --clippy: poligon(0 0, 0 0, 0 100%, 0% 100%);
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
 }
 .container_transitions{
     position: relative;
     background-color: #f2f2f2;
     height: 100vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: -1;
 }
 .texts{
     margin: auto;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
 .name{
     font-size: 3rem;
@@ -20,13 +23,14 @@
 .paragraph{
     font-size: 2rem;
     font-weight: 300;
+    --clippy: circle(0% at 50% 50%);
 }
 
 .item{
     position: relative;
     background: #f2f2f200;
-    /* padding-left: 1rem; */
-    /* z-index: 2; */
+    padding-left: 1rem;
+    transition: color .1s;
 }
 .item::before{
     content: '';
@@ -37,5 +41,21 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -3;
+    clip-path: var(--clippy);
+    transition: clip-path 2s;
+}
+.paragraph::before{
+    background: #f86d70;
+}
+.name:hover::before{
+    clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
+}
+.name:hover + .paragraph::before{
+    clip-path: circle(150% at 50% 50%);
+    transition: clip-path 1.5s 2s;
+}
+.name:hover,
+.name:hover + .paragraph{
+    color: #fff;
 }
