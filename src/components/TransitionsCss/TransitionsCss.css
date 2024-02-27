@@ -1,0 +1,13 @@
+:root{
+    --clippy: polugon(0 0, 0 0, 0 100%, 0% 100%);
+}
+.container_transitions{
+    background-color: #f2f2f2;
+    height: 100vh;
+    display: flex;
+}
+.texts{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,9 +1,9 @@
-import { TrancisionsCss } from "./components/TrancisionsCss/TrancisionsCss";
+import { TransitionsCss } from "./components/TransitionsCss/TransitionsCss";
 
 function App() {
   return (
     <div className="App">
-      <TrancisionsCss />
+      <TransitionsCss />
     </div>
   );
 }
