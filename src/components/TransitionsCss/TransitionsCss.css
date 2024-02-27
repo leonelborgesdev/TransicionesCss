@@ -1,13 +1,41 @@
 :root{
-    --clippy: polugon(0 0, 0 0, 0 100%, 0% 100%);
+    --clippy: poligon(0 0, 0 0, 0 100%, 0% 100%);
 }
 .container_transitions{
+    position: relative;
     background-color: #f2f2f2;
     height: 100vh;
     display: flex;
+    z-index: -1;
 }
 .texts{
     margin: auto;
     display: flex;
     flex-direction: column;
+}
+.name{
+    font-size: 3rem;
+    margin-bottom: .5em;
+}
+.paragraph{
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.item{
+    position: relative;
+    background: #f2f2f200;
+    /* padding-left: 1rem; */
+    /* z-index: 2; */
+}
+.item::before{
+    content: '';
+    display: block;
+    background: slateblue;
+    width: 120%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
